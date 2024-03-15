@@ -1,0 +1,35 @@
+.app {
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100vh !important; /* Full viewport height */
+  overflow: hidden;
+  --toolbar-height: 3rem !important;
+}
+
+.toolbar {
+  background-color: #333;
+  color: #fff;
+  height: var(--toolbar-height);
+  position: fixed; /* Fixiert die Toolbar oben */
+  width: 100%; /* Spannt über die gesamte Breite */
+  z-index: 1;
+}
+
+.content {
+  display: flex !important;
+  flex: 1 !important; /* This allows the content area to expand and fill the remaining space */
+  overflow: hidden;
+}
+
+.sidenav {
+  background-color: #444;
+  color: #fff;
+}
+
+.body {
+  flex: 1 !important; /* This will make the body fill the remaining space */
+  overflow-y: auto;
+  padding: 0.5rem;
+  background-color: var(--surface-ground);
+  color: var(--text-color);
+}

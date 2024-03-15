@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'primeng/resources/themes/mdc-light-indigo/theme.css';
+@import 'primeng/resources/primeng.css';
+@import '../../../node_modules/primeflex/primeflex.css';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+/* these Styles are globally available and can be used as following var(--ha-darkblue-500) */
+:root {
+  /* Transitions */
+  --ha-transition-05: all 0.5s ease;
+
+  /* Background Colors */
+  --ha-white: #fff;
+  --ha-black: #1e1e1e;
+
+  /* Menu Button Hover Active */
+  --ha-menu-button-hover: #0000001a;
+  --ha-menu-button-active: #00000033;
+
+  /* Theme Colors */
+  --ha-darkblue-100: #c7eff9;
+  --ha-darkblue-200: #92daf4;
+  --ha-darkblue-300: #59b4df;
+  --ha-darkblue-400: #3089c0;
+  --ha-darkblue-500: #005597;
+  --ha-darkblue-600: #004181;
+  --ha-darkblue-700: #00316c;
+  --ha-darkblue-800: #002257;
+  --ha-darkblue-900: #001848;
+  --ha-green-100: #d2f8e7;
+  --ha-green-200: #a8f1d7;
+  --ha-green-300: #75d5bc;
+  --ha-green-400: #4bac9b;
+  --ha-green-500: #1d756e;
+  --ha-green-600: #156364;
+  --ha-green-700: #0e4d54;
+  --ha-green-800: #093843;
+  --ha-green-900: #052938;
+  --ha-lightblue-100: #ebf9fd;
+  --ha-lightblue-200: #d8f1fc;
+  --ha-lightblue-300: #c1e3f6;
+  --ha-lightblue-400: #add3ec;
+  --ha-lightblue-500: #91bce1;
+  --ha-lightblue-600: #6994c1;
+  --ha-lightblue-700: #496fa2;
+  --ha-lightblue-800: #2e4e82;
+  --ha-lightblue-900: #1b356c;
+  --ha-yellow-100: #fef9d2;
+  --ha-yellow-200: #fdf2a6;
+  --ha-yellow-300: #fae779;
+  --ha-yellow-400: #f5db57;
+  --ha-yellow-500: #efc922;
+  --ha-yellow-600: #cda818;
+  --ha-yellow-700: #ac8911;
+  --ha-yellow-800: #8a6b0a;
+  --ha-yellow-900: #725606;
+  --ha-red-100: #fbe4cc;
+  --ha-red-200: #f8c49b;
+  --ha-red-300: #ea9767;
+  --ha-red-400: #d56c40;
+  --ha-red-500: #ba340d;
+  --ha-red-600: #9f2009;
+  --ha-red-700: #851006;
+  --ha-red-800: #6b0404;
+  --ha-red-900: #590208;
+  --ha-orange-100: #fff6cc;
+  --ha-orange-200: #ffea99;
+  --ha-orange-300: #ffdc66;
+  --ha-orange-400: #ffcd3f;
+  --ha-orange-500: #ffb600;
+  --ha-orange-600: #db9600;
+  --ha-orange-700: #b77800;
+  --ha-orange-800: #935c00;
+  --ha-orange-900: #7a4800;
+  --ha-violett-100: #f8d0e4;
+  --ha-violett-200: #f2a4d1;
+  --ha-violett-300: #da70b7;
+  --ha-violett-400: #b6489b;
+  --ha-violett-500: #861a76;
+  --ha-violett-600: #73136d;
+  --ha-violett-700: #5d0d60;
+  --ha-violett-800: #44084d;
+  --ha-violett-900: #320440;
+  --ha-grey-100: #f6f7f7;
+  --ha-grey-200: #eeeff0;
+  --ha-grey-300: #d0d2d3;
+  --ha-grey-400: #a5a6a7;
+  --ha-grey-500: #6b6c6d;
+  --ha-grey-600: #4e555d;
+  --ha-grey-700: #353f4e;
+  --ha-grey-800: #222c3f;
+  --ha-grey-900: #141e34;
+}

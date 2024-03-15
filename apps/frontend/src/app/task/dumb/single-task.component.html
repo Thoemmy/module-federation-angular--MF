@@ -1,0 +1,9 @@
+<div class="task">
+  <h3 class="title">{{ data.title }}</h3>
+  <p class="description">{{ data.description }}</p>
+
+  <span class="horizontal-spacer"></span>
+
+  <p-button (click)="updateTask($event)">Update</p-button>
+  <p-button (click)="deleteTask($event)">Delete</p-button>
+</div>

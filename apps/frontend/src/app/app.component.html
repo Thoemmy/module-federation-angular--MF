@@ -1,0 +1,32 @@
+<!-- Global Toast Message called through toast-service -->
+<p-toast key="global" position="top-right"></p-toast>
+
+<!-- // Change -->
+
+<div class="app">
+  <div class="content">
+    <div class="sidenav">
+      <ha-sidenav
+        appTitle="Template"
+        [showLogo]="false"
+        [showBottomButton]="true"
+        [collapseSublevelOnClose]="true"
+        [closeSidenavOnClick]="true"
+        [expandSublevelOnClick]="true"
+        [useLogoAsLink]="false"
+        [loginDisplay]="loginDisplay"
+        (oToggleSideNav)="oToggleSideNav($event)"
+        shortLogo=""
+        logoURL=""
+        logoRouteLink=""
+      ></ha-sidenav>
+    </div>
+    <div class="body">
+      <ha-body
+        [collapsed]="isSideNavCollapsed"
+        [screenWidth]="screenWidth"
+        [isIframe]="isIframe"
+      ></ha-body>
+    </div>
+  </div>
+</div>

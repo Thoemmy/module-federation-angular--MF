@@ -1,0 +1,10 @@
+<div *ngFor="let task of tasks" class="task">
+  <h3 class="title">{{ task.title }}</h3>
+  <p class="description">{{ task.description }}</p>
+
+  <span class="horizontal-spacer"></span>
+
+  <p-button (click)="updateTask(task)">Update</p-button>
+  <p-button (click)="deleteTask(task.id)">Delete</p-button>
+</div>
+<p-button (click)="addNewTask()">Add New Task</p-button>

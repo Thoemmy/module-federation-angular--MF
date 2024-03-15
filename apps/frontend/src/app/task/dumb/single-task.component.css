@@ -1,0 +1,19 @@
+.task {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.description {
+  font-size: 15px;
+}
+
+.horizontal-spacer {
+  flex: 1;
+}

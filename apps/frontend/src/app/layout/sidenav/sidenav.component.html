@@ -1,0 +1,100 @@
+<div
+  class="sidenav"
+  [ngClass]="collapsed ? 'sidenav-collapsed' : ''"
+  [style]="themeColor"
+>
+  <div class="logo-container" *ngIf="showLogo">
+    <button
+      *ngIf="!switchLogo"
+      class="logo"
+      (click)="
+        !useLogoAsLink ? toggleCollapse() : logoNavigateTo(logoRouteLink)
+      "
+    >
+      {{ shortLogo }}
+    </button>
+    <button
+      *ngIf="switchLogo"
+      aria-label="menu"
+      class="logo"
+      (click)="
+        !useLogoAsLink ? toggleCollapse() : logoNavigateTo(logoRouteLink)
+      "
+    >
+      <img class="logo-image" [src]="logoURL" alt="logo" />
+    </button>
+    <div class="logo-text" @fadeIn *ngIf="collapsed">{{ appTitle }}</div>
+    <button
+      aria-label="close"
+      class="btn-close"
+      @rotate
+      @fadeIn
+      *ngIf="collapsed"
+      (click)="toggleCollapse()"
+    >
+      <i class="fa-solid fa-xmark-large"></i>
+    </button>
+  </div>
+  <div class="scrollwrap scrollwrap_delayed">
+    <ul class="sidenav-nav">
+      <ng-container *ngFor="let data of navData">
+        <ng-container *ngIf="canAccess()">
+          <li class="sidenav-nav-item">
+            <a
+              class="sidenav-nav-link"
+              (click)="handleClick(data)"
+              *ngIf="data.items && data.items.length > 0"
+            >
+              <i class="sidenav-link-icon" [class]="data.icon"></i>
+              <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+                {{ data.label }}
+              </span>
+              <i
+                *ngIf="data.items && collapsed"
+                class="menu-collapse-icon"
+                [ngClass]="
+                  !data.expanded
+                    ? 'fa-solid fa-chevron-down'
+                    : 'fa-solid fa-chevron-up'
+                "
+              ></i>
+            </a>
+            <a
+              class="sidenav-nav-link"
+              *ngIf="!data.items || (data.items && data.items.length === 0)"
+              (click)="toggleCollapseOnSelect()"
+              [routerLink]="[data.routeLink]"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              [pTooltip]="data.label"
+            >
+              <i class="sidenav-link-icon" [class]="data.icon"></i>
+              <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+                {{ data.label }}
+              </span>
+            </a>
+            <div *ngIf="collapsed && data.items && data.items.length > 0">
+              <ha-sublevel-menu
+                (oClick)="toggleCollapseOnSelect()"
+                [data]="data"
+                [collapsed]="collapsed"
+                [multiple]="multiple"
+                [expanded]="data.expanded"
+              ></ha-sublevel-menu>
+            </div>
+          </li>
+        </ng-container>
+      </ng-container>
+    </ul>
+  </div>
+  <div class="bottom-container" *ngIf="showBottomButton">
+    <button
+      aria-label="toggleSidenavButton"
+      class="btn-close-bottom"
+      (click)="toggleCollapse()"
+    >
+      <i *ngIf="!collapsed" class="fa-solid fa-chevrons-right"></i>
+      <i *ngIf="collapsed" @rotateBottom class="fa-solid fa-chevrons-left"></i>
+    </button>
+  </div>
+</div>
